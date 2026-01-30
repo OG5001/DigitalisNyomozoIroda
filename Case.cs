@@ -30,6 +30,8 @@ namespace DigitalisNyomozoIroda
 		public string Cim { get => cim; set => cim = value; }
 		public string Leiras { get => leiras; set => leiras = value; }
 		public string Allapot { get => allapot; set => allapot = value; }
+		internal List<Person> Person { get => person;}
+		internal List<Evidence> Evidence { get => evidence;}
 
 		public override string ToString()
 		{

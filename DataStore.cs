@@ -20,5 +20,10 @@ namespace DigitalisNyomozoIroda
 			this.persons = new List<Person>();
 			this.evidences = new List<Evidence>();
 		}
+
+		internal List<User> Users { get => users;}
+		internal List<Case> Cases { get => cases;}
+		internal List<Person> Persons { get => persons;}
+		internal List<Evidence> Evidences { get => evidences;}
 	}
 }
