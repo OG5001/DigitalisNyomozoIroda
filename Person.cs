@@ -27,5 +27,11 @@ namespace DigitalisNyomozoIroda
 		{
 			return $"Név: {this.nev}\n\tÉletkor: {this.eletkor}\n\tMegyjegyzes: {this.megjegyzes}";
 		}
+
+		public void bead()
+		{
+			
+			
+		}
 	}
 }

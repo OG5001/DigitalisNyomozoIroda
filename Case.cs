@@ -37,5 +37,15 @@ namespace DigitalisNyomozoIroda
 		{
 			return $"Ügy Azonosító: {this.ugyAzonosito}\n\tCím: {this.cim}\n\tLeírás: {this.leiras}\n\t Állapot: {this.allapot}";
 		}
+
+		public void beolvasP(Person p)
+		{
+			person.Add(p);
+		}
+		public void beolvasE(Evidence e)
+		{ 
+			evidence.Add(e);
+		}
+		
 	}
 }
