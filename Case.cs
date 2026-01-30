@@ -8,5 +8,26 @@ namespace DigitalisNyomozoIroda
 {
 	internal class Case
 	{
+		private string ugyAzonosito;
+		private string cim;
+		private string leiras;
+		private string allapot;
+
+
+		public Case(string ugyAzonosito, string cim, string leiras, string allapot)
+		{
+			this.ugyAzonosito = ugyAzonosito;
+			this.cim = cim;
+			this.leiras = leiras;
+			this.allapot = allapot;
+			List<Person> personLista = new List<Person>();
+			List<Evidence> bizonyitekLista = new List<Evidence>();
+		}
+
+		public string UgyAzonosito { get => ugyAzonosito; set => ugyAzonosito = value; }
+		public string Cim { get => cim; set => cim = value; }
+		public string Leiras { get => leiras; set => leiras = value; }
+		public string Allapot { get => allapot; set => allapot = value; }
+
 	}
 }
