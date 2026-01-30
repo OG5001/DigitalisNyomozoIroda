@@ -10,17 +10,15 @@ namespace DigitalisNyomozoIroda
 	{
 		private string aktualisStatusz;
 
-		public CaseStatus(string aktualisStatuszstatus)
+		public CaseStatus(string aktualisStatusz)
 		{
-			aktualisStatusz = aktualisStatuszstatus;
+			aktualisStatusz = aktualisStatusz;
 		}
 
 		public string Status { get => aktualisStatusz; set => aktualisStatusz = value; }
 
 		public string allapot(string s)
-		{
-			Console.WriteLine("");
-			string abc = Console.ReadLine();
+		{;
 			aktualisStatusz = s;
 			return aktualisStatusz;
 		}
