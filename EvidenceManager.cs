@@ -8,5 +8,13 @@ namespace DigitalisNyomozoIroda
 {
 	internal class EvidenceManager
 	{
+		private List<Evidence> evidences;
+
+		public EvidenceManager()
+		{
+			this.evidences = new List<Evidence>();
+		}
+
+		internal List<Evidence> Evidences { get => evidences;}
 	}
 }

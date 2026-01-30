@@ -8,6 +8,7 @@
             Suspect s = new Suspect(p, 100, "Mégse olyan jó gyerek");
 			Console.WriteLine();
 			Console.WriteLine(s);
+
         }
     }
 }

@@ -12,6 +12,8 @@ namespace DigitalisNyomozoIroda
 		private string cim;
 		private string leiras;
 		private string allapot;
+		private List<Person> person;
+		private List<Evidence> evidence;
 
 
 		public Case(string ugyAzonosito, string cim, string leiras, string allapot)
@@ -20,8 +22,8 @@ namespace DigitalisNyomozoIroda
 			this.cim = cim;
 			this.leiras = leiras;
 			this.allapot = allapot;
-			List<Person> personLista = new List<Person>();
-			List<Evidence> bizonyitekLista = new List<Evidence>();
+			this.person = new List<Person>();
+			this.evidence = new List<Evidence>();
 		}
 
 		public string UgyAzonosito { get => ugyAzonosito; set => ugyAzonosito = value; }

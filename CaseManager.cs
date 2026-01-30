@@ -8,5 +8,13 @@ namespace DigitalisNyomozoIroda
 {
 	internal class CaseManager
 	{
+		private List<Case> cases;
+
+		public CaseManager(List<Case> cases)
+		{
+			this.cases = cases;
+		}
+
+		internal List<Case> Cases { get => cases;}
 	}
 }
