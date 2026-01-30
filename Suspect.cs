@@ -25,7 +25,7 @@ namespace DigitalisNyomozoIroda
 
 		public override string ToString()
 		{
-			return $"Gyanusított Adatok: {this.Person.ToString}\nGyanusítottsági szint:{this.szint}\nStátusz: {this.status}";
+			return $"Gyanusított Adatok: {this.Person.ToString()}\n\tGyanusítottsági szint:{this.szint}\n\tStátusz: {this.status}";
 		}
 	}
 }

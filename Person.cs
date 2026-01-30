@@ -25,7 +25,7 @@ namespace DigitalisNyomozoIroda
 
 		public override string ToString()
 		{
-			return $"Név: {this.nev}\nÉletkor: {this.eletkor}\nMegyjegyzes: {this.megjegyzes}"
+			return $"Név: {this.nev}\n\tÉletkor: {this.eletkor}\n\tMegyjegyzes: {this.megjegyzes}";
 		}
 	}
 }
