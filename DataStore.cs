@@ -25,5 +25,52 @@ namespace DigitalisNyomozoIroda
 		internal List<Case> Cases { get => cases;}
 		internal List<Person> Persons { get => persons;}
 		internal List<Evidence> Evidences { get => evidences;}
+
+		public void BeolvasP()
+		{
+
+			List<Person> person = new List<Person>();
+			Person p = new Person("Hurkás Béla", 23, "Eléggé túlsúlyos");
+			Person p2 = new Person("Lakatos Bence", 52, "Neve ellenére nem lakatos a foglalkozása");
+			person.Add(p);
+			person.Add(p2);
+		}
+		public void BeolvasE()
+		{
+			List<Evidence> evidence = new List<Evidence>();
+			Evidence e = new Evidence("241356", "fotó", "A kép egy összetört autót ábrázol", 3);
+			evidence.Add(e);
+			Evidence e2 = new Evidence("42451", "dokumentum", "Fontos dokumentumok egy DEA ügyben", 5);
+			evidence.Add(e2);
+		}
+
+		public void BeolvasU()
+		{
+			List<User> users = new List<User>();
+			User u = new User("Erős Robi", "327385", "Elemző");
+			users.Add(u);
+			User u2 = new User("Kovács Péter", "132452", "Nyomozó");
+			users.Add(u2);
+		}
+
+		public void BeolvasC()
+		{
+			List<Case> cases = new List<Case>();
+			Case c = new Case("235765", "Karambolás", "Ittas sofőr ütközött egy másik ittas sofőrrel.", "nyitott");
+			cases.Add(c);
+			Case c2 = new Case("345987", "Betörés", "Egy haloweeni jelmezbe öltözött férfi tört be a 09.Kerület Bors utca 2-be.", "lezárt");
+			cases.Add(c2);
+		}
+		public override string ToString()
+		{
+			string s = "";
+			foreach (var item in persons)
+			{
+				s += item + "\n";
+			}
+			return s;
+		}
+
+
 	}
 }

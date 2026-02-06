@@ -12,8 +12,8 @@ namespace DigitalisNyomozoIroda
 		private string cim;
 		private string leiras;
 		private string allapot;
-		private List<Person> person;
-		private List<Evidence> evidence;
+		List<Person> person = new List<Person>();	
+		List<Evidence> evidence = new List<Evidence>();
 
 
 		public Case(string ugyAzonosito, string cim, string leiras, string allapot)
@@ -38,14 +38,8 @@ namespace DigitalisNyomozoIroda
 			return $"Ügy Azonosító: {this.ugyAzonosito}\n\tCím: {this.cim}\n\tLeírás: {this.leiras}\n\t Állapot: {this.allapot}";
 		}
 
-		public void beolvasP(Person p)
-		{
-			person.Add(p);
-		}
-		public void beolvasE(Evidence e)
-		{ 
-			evidence.Add(e);
-		}
+
+
 		
 	}
 }

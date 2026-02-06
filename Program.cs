@@ -4,15 +4,14 @@ namespace DigitalisNyomozoIroda
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
-            List<Person> person = new List<Person>();
-            List<Evidence> evidences = new List<Evidence>();
-            Person p = new Person("Béla", 23, "jó gyerek");
-            Suspect s = new Suspect(p, 100, "Mégse olyan jó gyerek");
-            Evidence e = new Evidence("wf3t3", "fotó", "Fotó egy betört ablakról", 2);
-            person.Add(p);
-			Console.WriteLine(person);
+            DataStore dataStore = new DataStore();
+            dataStore.BeolvasU();
+            dataStore.BeolvasP();
+            dataStore.BeolvasE();
+            dataStore.BeolvasC();
             Menu();
 
         }
