@@ -8,6 +8,7 @@ namespace DigitalisNyomozoIroda
         static void Main(string[] args)
         {
             DataStore dataStore = new DataStore();
+            Program program = new Program();
 
 
 
@@ -15,10 +16,10 @@ namespace DigitalisNyomozoIroda
             dataStore.BeolvasP();
             dataStore.BeolvasE();
             dataStore.BeolvasC();
-            Menu();
+            program.Menu();
             
         }
-		static void Menu()
+		public void Menu()
 		{
 			CaseManager caseManager = new CaseManager();
 			string menu = "";
@@ -29,41 +30,44 @@ namespace DigitalisNyomozoIroda
 4. Idővonal megtekintése
 5. Elemzés / döntések
 6. Kilépés");
-            while (menu != "1" || menu != "2" || menu != "3" || menu != "4" || menu != "5" || menu != "6")
-            {
-                Console.WriteLine();
-                Console.Write("Válassz egy menüpontot: ");
-                menu = Console.ReadLine();
-                if (menu == "1")
-                {
-                    caseManager.Menu2();
-                }
-                else if (menu == "2")
-                {
+          
 
-                }
-                else if (menu == "3")
+                do
                 {
+				    Console.WriteLine();
+				    Console.Write("Válassz egy menüpontot: ");
+				    menu = Console.ReadLine();
+				    if (menu == "1")
+                    {
+                        caseManager.Menu2();
+                    }
+                    else if (menu == "2")
+                    {
 
-                }
-                else if(menu == "4")
-                {
+                    }
+                    else if (menu == "3")
+                    {
 
-                }
-                else if(menu == "5")
-                {
+                    }
+                    else if (menu == "4")
+                    {
 
+                    }
+                    else if (menu == "5")
+                    {
+
+                    }
+                    else if (menu == "6")
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Hibás számot adott meg! Kérem próbálja újra");
+                        Console.WriteLine();
+                    }
                 }
-                else if(menu == "6")
-                {
-                    
-                }
-                else
-                {
-					Console.WriteLine("Hibás számot adott meg! Kérem próbálja újra");
-					Console.WriteLine();
-                }
-            }
+                while (menu != "6");
 		}
 	}
 }

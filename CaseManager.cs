@@ -9,6 +9,7 @@ namespace DigitalisNyomozoIroda
 {
 	internal class CaseManager
 	{
+		DataStore dataStore = new DataStore();
 		List<Case> cases = new List<Case>();
 
 		public CaseManager()
@@ -35,32 +36,69 @@ namespace DigitalisNyomozoIroda
 			string c4 = Console.ReadLine();
 			Case uj = new Case($"{c}", $"{c2}", $"{c3}", $"{c4}");
 			cases.Add(uj);
+			Menu2();
+		}
+		public void UgyekListazasa()
+		{
+			
+			dataStore.Ossz();
+			Console.WriteLine(dataStore);
+			Menu2();
+		}
+		public void Hozzarendeles()
+		{
+			Console.WriteLine();
+
+			string valasz = "";
+			while (valasz != "személy" || valasz != "bizonyíték")
+			{
+				Console.Write("Személyt vagy bizonyítékot szeretnél hozzárendelni: ");
+				valasz = Console.ReadLine();
+				if (valasz != "személy" || valasz != "bizonyíték")
+				{
+					Console.WriteLine("Rosszul írtad be, próbáld meg újra!");
+					Console.WriteLine();
+				}
+				else
+				{
+
+				}
+			}
+
+
 		}
 		public void Menu2()
 		{
-			int valasz = 0;
+			Program program = new Program();
+			string valasz = "";
 			Console.WriteLine(@"
 Ügykezelő
 
 Válasszon egy opciót
 Ügyek listázása - 1
 Új ügy létrehozása - 2
-Személyek és bizonyítékok hozzárendelése - 3");
-			while (valasz < 1 || valasz > 3)
+Személyek és bizonyítékok hozzárendelése - 3
+Vissza - 4");
+			while (valasz != "1" || valasz != "2" || valasz != "3" || valasz != "4")
 			{
-				valasz = Convert.ToInt32(Console.ReadLine());
-				if (valasz == 1)
+				valasz = Console.ReadLine();
+				if (valasz == "1")
 				{
-
+					Console.WriteLine();
+					UgyekListazasa();
 				}
-				else if (valasz == 2)
+				else if (valasz == "2")
 				{
 					Console.WriteLine();
 					UjÜgy();
 				}
-				else if (valasz == 3)
+				else if (valasz == "3")
 				{
 
+				}
+				else if (valasz == "4")
+				{
+					program.Menu();
 				}
 				else
 				{
