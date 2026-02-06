@@ -14,6 +14,7 @@ namespace DigitalisNyomozoIroda
 		private string allapot;
 		List<Person> person = new List<Person>();	
 		List<Evidence> evidence = new List<Evidence>();
+		
 
 
 		public Case(string ugyAzonosito, string cim, string leiras, string allapot)
@@ -35,6 +36,7 @@ namespace DigitalisNyomozoIroda
 
 		public override string ToString()
 		{
+			
 			return $"Ügy Azonosító: {this.ugyAzonosito}\n\tCím: {this.cim}\n\tLeírás: {this.leiras}\n\t Állapot: {this.allapot}";
 		}		
 	}

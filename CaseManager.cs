@@ -9,8 +9,8 @@ namespace DigitalisNyomozoIroda
 {
 	internal class CaseManager
 	{
-		DataStore dataStore = new DataStore();
 		List<Case> cases = new List<Case>();
+		DataStore dataStore = new DataStore();
 
 		public CaseManager()
 		{
@@ -22,6 +22,7 @@ namespace DigitalisNyomozoIroda
 		
 		public void UjÜgy()
 		{
+			dataStore.Ossz();
 			Console.WriteLine();
 			Console.Write("Kérem az új ügy azonosítóját: ");
 			string c = Console.ReadLine();
@@ -73,11 +74,52 @@ namespace DigitalisNyomozoIroda
 							string nev = Console.ReadLine();
 							Console.WriteLine();
 							Console.Write("Kérlek add meg a korát: ");
-							string kor = Console.ReadLine();
+							int kor = Convert.ToInt32(Console.ReadLine());
 							Console.WriteLine();
 							Console.Write("Kérlek add meg a leírását: ");
 							string leiras = Console.ReadLine();
+							Person p = new Person(nev,kor,leiras);
+							dataStore.Persons.Add(p);
 							
+						}
+						else if (sz == "régi")
+						{
+							Console.WriteLine();
+							int val = 100;
+							while (val > dataStore.Persons.Count && val < 0)
+							{
+								Console.WriteLine();
+								Console.WriteLine(dataStore.Persons);
+								Console.WriteLine();
+								Console.WriteLine("Kérlek válassz egyet az alábbiak közül: ");
+								val = Convert.ToInt32(Console.ReadLine());
+								if (val > dataStore.Persons.Count && val < 0)
+								{
+									Console.WriteLine();
+									Console.WriteLine("Rosszat írtál be, kérlek próbáld újra!");
+								}
+								else
+								{
+									int val2 = 100;
+									Console.WriteLine();
+									while (val > dataStore.Cases.Count && val < 0)
+									{
+										Console.WriteLine(dataStore.Cases);
+										Console.WriteLine();
+										Console.WriteLine("Melyik ügyhöz szeretnéd hozzáadni: ");
+										val2 = Convert.ToInt32(Console.ReadLine());
+										if (val > dataStore.Cases.Count && val < 0)
+										{
+											Console.WriteLine();
+											Console.WriteLine("Rosszat írtál be, kérlek próbáld újra!");
+										}
+										else
+										{
+											
+										}
+									}
+								}
+							}
 						}
 					}
 
@@ -115,7 +157,8 @@ Válasszon egy opciót: ");
 				}
 				else if (valasz == "3")
 				{
-
+					Console.WriteLine();
+					Hozzarendeles();
 				}
 				else if (valasz == "4")
 				{
