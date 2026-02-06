@@ -69,6 +69,7 @@ namespace DigitalisNyomozoIroda
 		}
 		public override string ToString()
 		{
+			
 			Console.WriteLine("Ügyek:");
 			string s = "";
 			foreach (var item in cases)

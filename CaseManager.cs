@@ -59,8 +59,28 @@ namespace DigitalisNyomozoIroda
 					Console.WriteLine("Rosszul írtad be, próbáld meg újra!");
 					Console.WriteLine();
 				}
-				else
+				else if (valasz == "személy")
 				{
+					string sz = "";
+					while (sz != "új" || sz != "régi")
+					{
+						Console.WriteLine("új vagy régi személyt szeretnél megadni: ");
+						sz = Console.ReadLine();
+						if (sz == "új")
+						{
+							Console.WriteLine();
+							Console.Write("kérlek add meg a személy nevét: ");
+							string nev = Console.ReadLine();
+							Console.WriteLine();
+							Console.Write("Kérlek add meg a korát: ");
+							string kor = Console.ReadLine();
+							Console.WriteLine();
+							Console.Write("Kérlek add meg a leírását: ");
+							string leiras = Console.ReadLine();
+							
+						}
+					}
+
 
 				}
 			}
@@ -71,14 +91,15 @@ namespace DigitalisNyomozoIroda
 		{
 			Program program = new Program();
 			string valasz = "";
-			Console.WriteLine(@"
+			Console.Write(@"
 Ügykezelő
 
-Válasszon egy opciót
 Ügyek listázása - 1
 Új ügy létrehozása - 2
 Személyek és bizonyítékok hozzárendelése - 3
-Vissza - 4");
+Vissza - 4
+
+Válasszon egy opciót: ");
 			while (valasz != "1" || valasz != "2" || valasz != "3" || valasz != "4")
 			{
 				valasz = Console.ReadLine();

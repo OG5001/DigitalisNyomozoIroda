@@ -10,12 +10,7 @@ namespace DigitalisNyomozoIroda
             DataStore dataStore = new DataStore();
             Program program = new Program();
 
-
-
-            dataStore.BeolvasU();
-            dataStore.BeolvasP();
-            dataStore.BeolvasE();
-            dataStore.BeolvasC();
+            dataStore.Ossz();
             program.Menu();
             
         }
