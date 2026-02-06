@@ -8,16 +8,20 @@ namespace DigitalisNyomozoIroda
         static void Main(string[] args)
         {
             DataStore dataStore = new DataStore();
+
+
+
             dataStore.BeolvasU();
             dataStore.BeolvasP();
             dataStore.BeolvasE();
             dataStore.BeolvasC();
             Menu();
-
+            
         }
 		static void Menu()
 		{
-            int menu = 0;
+			CaseManager caseManager = new CaseManager();
+			string menu = "";
 			Console.WriteLine(@"
 1. Ügyek kezelése
 2. Személyek kezelése
@@ -25,32 +29,32 @@ namespace DigitalisNyomozoIroda
 4. Idővonal megtekintése
 5. Elemzés / döntések
 6. Kilépés");
-            while (menu < 1 || menu > 6)
+            while (menu != "1" || menu != "2" || menu != "3" || menu != "4" || menu != "5" || menu != "6")
             {
                 Console.WriteLine();
                 Console.Write("Válassz egy menüpontot: ");
-                menu =Convert.ToInt32( Console.ReadLine());
-                if (menu == 1)
+                menu = Console.ReadLine();
+                if (menu == "1")
+                {
+                    caseManager.Menu2();
+                }
+                else if (menu == "2")
                 {
 
                 }
-                else if (menu == 2)
+                else if (menu == "3")
                 {
 
                 }
-                else if (menu == 3)
+                else if(menu == "4")
                 {
 
                 }
-                else if(menu == 4)
+                else if(menu == "5")
                 {
 
                 }
-                else if(menu == 5)
-                {
-
-                }
-                else if(menu == 6)
+                else if(menu == "6")
                 {
                     
                 }

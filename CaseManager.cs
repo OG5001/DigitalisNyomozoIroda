@@ -38,6 +38,7 @@ namespace DigitalisNyomozoIroda
 		}
 		public void Menu2()
 		{
+			int valasz = 0;
 			Console.WriteLine(@"
 Ügykezelő
 
@@ -45,7 +46,28 @@ Válasszon egy opciót
 Ügyek listázása - 1
 Új ügy létrehozása - 2
 Személyek és bizonyítékok hozzárendelése - 3");
+			while (valasz < 1 || valasz > 3)
+			{
+				valasz = Convert.ToInt32(Console.ReadLine());
+				if (valasz == 1)
+				{
 
+				}
+				else if (valasz == 2)
+				{
+					Console.WriteLine();
+					UjÜgy();
+				}
+				else if (valasz == 3)
+				{
+
+				}
+				else
+				{
+					Console.WriteLine();
+					Console.WriteLine("Rossz számot ütöttél be! Kérlek próbáld újra.");
+				}
+			}
 		}
 	}
 }
