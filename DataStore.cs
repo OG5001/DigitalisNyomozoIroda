@@ -67,18 +67,5 @@ namespace DigitalisNyomozoIroda
 			BeolvasP();
 			BeolvasU();
 		}
-		public override string ToString()
-		{
-			
-			Console.WriteLine("Ügyek:");
-			string s = "";
-			foreach (var item in cases)
-			{
-				s +=  $"\n\nAzonosító: {item.UgyAzonosito}\nCím: {item.Cim}\nLeírás: {item.Leiras}\nSzemélyek: {item.Person}\nBizonyítékok: {item.Evidence}\n\n";
-			}
-			return s;
-		}
-
-
 	}
 }

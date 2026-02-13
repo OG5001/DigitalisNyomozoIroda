@@ -29,6 +29,7 @@ namespace DigitalisNyomozoIroda
 
                 do
                 {
+                    menu = "";
 				    Console.WriteLine();
 				    Console.Write("Válassz egy menüpontot: ");
 				    menu = Console.ReadLine();
