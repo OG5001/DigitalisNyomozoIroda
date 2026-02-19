@@ -8,24 +8,27 @@ namespace DigitalisNyomozoIroda
 {
 	internal class Witness
 	{
-		private Person person;
+		List <Person> person = new List <Person>();
 		private string vallomas;
-		private string datum;
+		private DateTime datum;
 
-		public Witness(Person person, string vallomas, string datum)
+		public Witness(string vallomas, DateTime datum)
 		{
-			this.person = person;
-			this.vallomas = vallomas;
+            this.person = new List<Person>();
+            this.vallomas = vallomas;
 			this.datum = datum;
 		}
 
 		public string Vallomas { get => vallomas; set => vallomas = value; }
-		public string Datum { get => datum; set => datum = value; }
-		internal Person Person { get => person; set => person = value; }
+		public DateTime Datum { get => datum; set => datum = value; }
+        internal List<Person> Person { get => person; }
 
-		public override string ToString()
+        public override string ToString()
 		{
-			return $"Szemtanú adatai: {this.Person.ToString()}\n\tVallomás Szövege: {this.vallomas}\n\tVallomás Dátuma: {this.datum}";
+            string szemelyek = person.Count > 0
+? string.Join(", ", person.Select(p => p.Nev))
+: "Nincs";
+            return $"Szemtanú adatai: {szemelyek}\n\tVallomás Szövege: {this.vallomas}\n\tVallomás Dátuma: {this.datum}";
 		}
 	}
 }

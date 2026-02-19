@@ -56,7 +56,7 @@ namespace DigitalisNyomozoIroda
 			while (valasz != "személy" && valasz != "bizonyíték")
 			{
 				Console.Write("Személyt vagy bizonyítékot szeretnél hozzárendelni: ");
-				valasz = Console.ReadLine();
+				valasz = Console.ReadLine().ToLower();
 				if (valasz != "személy" && valasz != "bizonyíték")
 				{
 					Console.WriteLine("Rosszul írtad be, próbáld meg újra!");
@@ -90,7 +90,7 @@ namespace DigitalisNyomozoIroda
                                     Console.WriteLine(a);
                                 }
                                 Console.WriteLine();
-                                Console.WriteLine("Melyik ügyhöz szeretnéd hozzáadni: ");
+                                Console.WriteLine("Melyik ügyhöz szeretnéd hozzáadni (index szerint): ");
                                 val = Convert.ToInt32(Console.ReadLine());
                                 if (val > dataStore.Cases.Count || val < 0)
                                 {
@@ -120,7 +120,7 @@ namespace DigitalisNyomozoIroda
 									Console.WriteLine(p);
 								}
 								Console.WriteLine();
-								Console.Write("Kérlek válassz egyet az alábbiak közül: ");
+								Console.Write("Kérlek válassz egyet az alábbiak közül (index szerint): ");
 								val2 = Convert.ToInt32(Console.ReadLine());
 								if (val2 > dataStore.Persons.Count || val2 < 0)
 								{
@@ -139,7 +139,7 @@ namespace DigitalisNyomozoIroda
 											Console.WriteLine(p);
 										}
 										Console.WriteLine();
-										Console.Write("Melyik ügyhöz szeretnéd hozzáadni: ");
+										Console.Write("Melyik ügyhöz szeretnéd hozzáadni (index szerint): ");
 										val = Convert.ToInt32(Console.ReadLine());
 										if (val > dataStore.Cases.Count || val < 0)
 										{
@@ -194,7 +194,7 @@ namespace DigitalisNyomozoIroda
                                     Console.WriteLine(p);
                                 }
                                 Console.WriteLine();
-                                Console.WriteLine("Melyik ügyhöz szeretnéd hozzáadni: ");
+                                Console.WriteLine("Melyik ügyhöz szeretnéd hozzáadni (index szerint): ");
                                 val = Convert.ToInt32(Console.ReadLine());
                                 if (val > dataStore.Cases.Count || val < 0)
                                 {
@@ -224,7 +224,7 @@ namespace DigitalisNyomozoIroda
                                     Console.WriteLine(p);
                                 }
                                 Console.WriteLine();
-                                Console.Write("Kérlek válassz egyet az alábbiak közül: ");
+                                Console.Write("Kérlek válassz egyet az alábbiak közül (index szerint): ");
                                 val2 = Convert.ToInt32(Console.ReadLine());
                                 if (val2 > dataStore.Evidences.Count || val2 < 0)
                                 {
@@ -243,7 +243,7 @@ namespace DigitalisNyomozoIroda
                                             Console.WriteLine(p);
                                         }
                                         Console.WriteLine();
-                                        Console.Write("Melyik ügyhöz szeretnéd hozzáadni: ");
+                                        Console.Write("Melyik ügyhöz szeretnéd hozzáadni (index szerint): ");
                                         val = Convert.ToInt32(Console.ReadLine());
                                         if (val > dataStore.Cases.Count || val < 0)
                                         {
