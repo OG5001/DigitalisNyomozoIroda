@@ -17,7 +17,8 @@ namespace DigitalisNyomozoIroda
 		public void Menu()
 		{
 			CaseManager caseManager = new CaseManager();
-			string menu = "";
+            EvidenceManager evidenceManager = new EvidenceManager();
+            string menu = "";
 			Console.WriteLine(@"
 1. Ügyek kezelése
 2. Személyek kezelése
@@ -39,11 +40,11 @@ namespace DigitalisNyomozoIroda
                     }
                     else if (menu == "2")
                     {
-                        caseManager.Hozzarendeles();
+                        
                     }
                     else if (menu == "3")
                     {
-
+                        evidenceManager.Menu3();
                     }
                     else if (menu == "4")
                     {

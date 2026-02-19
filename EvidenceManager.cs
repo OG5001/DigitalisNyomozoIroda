@@ -48,13 +48,14 @@ namespace DigitalisNyomozoIroda
                     Console.WriteLine(p);
                 }
                 Console.WriteLine();
-                Console.Write("Melyik bizonyítékot szeretnéd törölni: ");
+                Console.Write("Melyik bizonyítékot szeretnéd törölni (index szerint): ");
                 valasz = Convert.ToInt32(Console.ReadLine());
                 dataStore.Evidences.RemoveAt(valasz);
             }
         }
         public void Lis()
         {
+            dataStore.Ossz();
             Console.WriteLine();
             Console.WriteLine("Bizonyítékok listája:");
             Console.WriteLine();
@@ -69,13 +70,15 @@ namespace DigitalisNyomozoIroda
             string valasz = "";
             while (valasz != "4")
             {
-                Console.WriteLine("Bizonyítékok kezelése");
                 Console.WriteLine();
+                Console.WriteLine("Bizonyítékok kezelése");
                 Console.WriteLine(@"
 1. bizonyíték hozzáadása
 2. bionyíték törlése
 3. listázás
 4. vissza");
+                Console.WriteLine();
+                Console.Write("Válassz egy opciót: ");
                 valasz = Console.ReadLine();
                 if (valasz == "1")
                 {
