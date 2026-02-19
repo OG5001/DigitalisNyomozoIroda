@@ -60,12 +60,13 @@ namespace DigitalisNyomozoIroda
 			Case c2 = new Case("345987", "Betörés", "Egy haloweeni jelmezbe öltözött férfi tört be a 09.Kerület Bors utca 2-be.", "lezárt");
 			cases.Add(c2);
 		}
-		public void Ossz()
-		{
-			BeolvasC();
-			BeolvasE();
-			BeolvasP();
-			BeolvasU();
-		}
-	}
+        public void Ossz()
+        {
+            if (cases.Count == 0) BeolvasC();
+            if (evidences.Count == 0) BeolvasE();
+            if (persons.Count == 0) BeolvasP();
+            if (users.Count == 0) BeolvasU();
+        }
+
+    }
 }

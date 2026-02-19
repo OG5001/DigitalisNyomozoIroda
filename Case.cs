@@ -36,8 +36,16 @@ namespace DigitalisNyomozoIroda
 
 		public override string ToString()
 		{
-			
-			return $"Ügy Azonosító: {this.ugyAzonosito}\n\tCím: {this.cim}\n\tLeírás: {this.leiras}\n\tÁllapot: {this.allapot}";
+            string szemelyek = person.Count > 0
+		? string.Join(", ", person.Select(p => p.Nev))
+		: "Nincs";
+
+            string bizonyitekok = evidence.Count > 0
+		? string.Join(", ", evidence.Select(e => e.Leiras))
+		: "Nincs";
+
+
+            return $"Ügy Azonosító: {this.ugyAzonosito}\n\tCím: {this.cim}\n\tLeírás: {this.leiras}\n\tÁllapot: {this.allapot}\n\tHozzáadott személy: {szemelyek}\n\tHozzáadott bizonyítékok: {bizonyitekok}";
 		}		
 	}
 }

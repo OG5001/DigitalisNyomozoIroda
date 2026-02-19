@@ -20,11 +20,9 @@ namespace DigitalisNyomozoIroda
 			string menu = "";
 			Console.WriteLine(@"
 1. Ügyek kezelése
-2. Személyek kezelése
-3. Bizonyítékok kezelése
-4. Idővonal megtekintése
-5. Elemzés / döntések
-6. Kilépés");
+2. Idővonal megtekintése
+3. Elemzés / döntések
+4. Kilépés");
           
 
                 do
@@ -39,21 +37,13 @@ namespace DigitalisNyomozoIroda
                     }
                     else if (menu == "2")
                     {
-
+                        
                     }
                     else if (menu == "3")
                     {
 
                     }
                     else if (menu == "4")
-                    {
-
-                    }
-                    else if (menu == "5")
-                    {
-
-                    }
-                    else if (menu == "6")
                     {
                         return;
                     }
@@ -63,7 +53,7 @@ namespace DigitalisNyomozoIroda
                         Console.WriteLine();
                     }
                 }
-                while (menu != "6");
+                while (menu != "4");
 		}
 	}
 }
