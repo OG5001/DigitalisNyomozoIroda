@@ -70,9 +70,9 @@ namespace DigitalisNyomozoIroda
             string valasz = "";
             while (valasz != "4")
             {
-                Console.WriteLine();
-                Console.WriteLine("Bizonyítékok kezelése");
                 Console.WriteLine(@"
+BIZONYÍTÉKKEZELŐ
+
 1. bizonyíték hozzáadása
 2. bionyíték törlése
 3. listázás

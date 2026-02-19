@@ -66,9 +66,9 @@ namespace DigitalisNyomozoIroda
             string valasz = "";
             while (valasz != "4")
             {
-                Console.WriteLine();
-                Console.WriteLine("Bizonyítékok kezelése");
                 Console.WriteLine(@"
+SZEMÉLYKEZELŐ
+
 1. Személy hozzáadása
 2. Személy törlése
 3. listázás

@@ -19,8 +19,11 @@ namespace DigitalisNyomozoIroda
 			CaseManager caseManager = new CaseManager();
             EvidenceManager evidenceManager = new EvidenceManager();
             PersonManager personManager = new PersonManager();
+            Timeline timeline = new Timeline();
             string menu = "";
 			Console.WriteLine(@"
+DIGITÁLIS NYOMOZÓIRODA
+
 1. Ügyek kezelése
 2. Személyek kezelése
 3. Bizonyítékok kezelése
@@ -49,7 +52,7 @@ namespace DigitalisNyomozoIroda
                     }
                     else if (menu == "4")
                     {
-
+                        timeline.Menu5();
                     }
                     else if (menu == "5")
                     {

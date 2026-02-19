@@ -105,10 +105,11 @@ namespace DigitalisNyomozoIroda
             if (evidences.Count == 0) BeolvasE();
             if (persons.Count == 0) BeolvasP();
             if (users.Count == 0) BeolvasU();
-            if (users.Count == 0) BeolvasT();
-            if (users.Count == 0) BeolvasS();
-            if (users.Count == 0) BeolvasW();
+            if (timelines.Count == 0) BeolvasT();
+            if (suspects.Count == 0) BeolvasS();  
+            if (witnesss.Count == 0) BeolvasW();   
         }
+
 
     }
 }

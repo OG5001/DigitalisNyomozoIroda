@@ -266,19 +266,46 @@ namespace DigitalisNyomozoIroda
 
 
 		}
-		public void Menu2()
+		public void CaseStatus()
+		{
+			dataStore.Ossz();
+			int valasz = -1;
+			string valasz2 = "";
+			while (valasz < 0 || valasz > dataStore.Cases.Count)
+			{
+                Console.WriteLine();
+				foreach (var p in dataStore.Cases)
+				{
+					Console.WriteLine(p);
+				}
+                Console.Write("Melyik ügyet státuszát szeretnéd megváltoztatni (index szerint): ");
+				valasz = Convert.ToInt32(Console.ReadLine());
+				Console.WriteLine();
+				if (valasz < 0 || valasz > dataStore.Cases.Count)
+				{
+					Console.WriteLine("Hibás indexet ütöttél be. Próbáld újra!");
+				}
+			}
+            Console.Write("Mire szeretnéd megváltoztatni a státuszt: ");
+            string ujAllapot = Console.ReadLine();
+            dataStore.Cases[valasz].Allapot = ujAllapot;
+
+
+        }
+        public void Menu2()
 		{
 			Program program = new Program();
 			string valasz = "";
-			while (valasz != "4")
+			while (valasz != "5")
 			{
                 Console.Write(@"
-Ügykezelő
+ÜGYKEZELŐ
 
 Ügyek listázása - 1
 Új ügy létrehozása - 2
 Személyek és bizonyítékok hozzárendelése - 3
-Vissza - 4
+Ügy állapotának módosítása - 4
+Vissza - 5
 
 Válasszon egy opciót: ");
                 valasz = Console.ReadLine();
@@ -298,6 +325,10 @@ Válasszon egy opciót: ");
 					Hozzarendeles();
 				}
 				else if (valasz == "4")
+				{
+					CaseStatus();
+				}
+				else if (valasz == "5")
 				{
 					program.Menu();
 				}
