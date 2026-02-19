@@ -18,6 +18,7 @@ namespace DigitalisNyomozoIroda
 		{
 			CaseManager caseManager = new CaseManager();
             EvidenceManager evidenceManager = new EvidenceManager();
+            PersonManager personManager = new PersonManager();
             string menu = "";
 			Console.WriteLine(@"
 1. Ügyek kezelése
@@ -40,7 +41,7 @@ namespace DigitalisNyomozoIroda
                     }
                     else if (menu == "2")
                     {
-                        
+                        personManager.Menu4();
                     }
                     else if (menu == "3")
                     {
@@ -56,7 +57,7 @@ namespace DigitalisNyomozoIroda
                     }
                     else if (menu == "6")
                     {
-                        return;
+                        break;
                     }
                     else
                     {
