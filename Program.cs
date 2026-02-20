@@ -28,8 +28,7 @@ DIGITÁLIS NYOMOZÓIRODA
 2. Személyek kezelése
 3. Bizonyítékok kezelése
 4. Idővonal megtekintése
-5. Elemzés / döntések
-6. Kilépés");
+5. Kilépés");
           
 
                 do
@@ -56,19 +55,15 @@ DIGITÁLIS NYOMOZÓIRODA
                     }
                     else if (menu == "5")
                     {
-
-                    }
-                    else if (menu == "6")
-                    {
-                        break;
+                        return;
                     }
                     else
-                    {
-                        Console.WriteLine("Hibás számot adott meg! Kérem próbálja újra");
-                        Console.WriteLine();
-                    }
+                {
+                    Console.WriteLine("Hibás számot adott meg! Kérem próbálja újra");
+                    Console.WriteLine();
                 }
-                while (menu != "6");
+                }
+                while (menu != "5");
 		}
 	}
 }

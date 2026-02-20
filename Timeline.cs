@@ -20,6 +20,7 @@ namespace DigitalisNyomozoIroda
 
         public void Ido()
         {
+            dataStore.Ossz();
             foreach (var p in dataStore.Cases)
             {
                 Console.WriteLine(p);
@@ -42,7 +43,7 @@ namespace DigitalisNyomozoIroda
                     Console.WriteLine(a);
                 }
                 Console.WriteLine();
-                Console.WriteLine("Melyik ügyhöz szeretnéd hozzáadni (index szerint): ");
+                Console.Write("Melyik ügyhöz szeretnéd hozzáadni (index szerint): ");
                 val = Convert.ToInt32(Console.ReadLine());
                 if (val > dataStore.Cases.Count || val < 0)
                 {
